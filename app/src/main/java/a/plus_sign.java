@@ -1,0 +1,22 @@
+package a;
+
+public class plus_sign {
+    public static String a = "\tGreetings!!!\n\n\tThis is the Sulat Baybayin X, under the X-Series of MPOP Reverse II. This is the Help Desk Section where it may guide you how to use the entire application.\n\n";
+	public static String b = "This app is now powered by the Sulat Baybayin commands that starts with Philippine Double Punctuation \"" + util.commands.initial_command +" \". The commands are all changed and remake as baybayin for easier learning the script.\n\nThis are the following commands that you may use:\n";
+	public static String c = "1. " + util.commands.helpdesk + "\n\t- This command is literally show this texts again.\n\n";
+	public static String d = "2. " + util.commands.script + "\n\t- This command is what I called, Baybay Silay, a command where you may see the baybayin scripts with the corresponding characters. It also added with the baybayin rule (English and Tagalog). It also added, what are the invalid character in unicode names and also the version of baybayin used.\n\n";
+	public static String e = "3. " + util.commands.tnx + "\n\t- This command shows who, what are the people, platforms that helped me in this application an also in my Modding and Developing Journey.\n\n";
+	public static String f = "4. " + util.commands.dev + "\n\t- This command shows the developer's information.\n\n";
+	public static String g = "5. " + util.commands.fb_feedback + "\n\t- This command uses internet connection to show and redirect you to the facebook platform where I allowed you to give me the feedback even you're in free data.\n\n";
+	public static String h = "6. " + util.commands.gmail_feedback + "\n\t- This command uses internet connectivity too, it was directed and required Gmail app or any email application provided.\n\n";
+	public static String i = "7. " + util.commands.copy + "\n\t- This command may help you to paste your copied text in every app launchers, but the saved data will be replaced unless you saved it.\n\n";
+	public static String j = "This is now the commands with end caller (" + util.commands.end_command + ")\n\n";
+	public static String k = "1. " + util.commands.textsize + "\n\t- This command is just to resize the text size of the field. The numbers required is from twelve to fifty (12 - 50).\n\n";
+	public static String l = "2. " + util.commands.theme + "\n\t- This command it just to change the theme of the application,\n\t~ These are the following themes in this application:\n\t* ᜇᜒᜎᜒᜋ᜔ - Dilim\n\t* ᜎᜏᜈᜄ᜔ - Liwanag\n\t* ᜄᜊᜒ ᜀᜆ᜔ ᜀᜍᜏ᜔ - Gabi at Araw\n\n";
+	public static String m = "3. " + util.commands.read + "\n\t- This command may work if you've saved a file using the menu button of this application.\n\n";
+	public static String n = "4. " + util.commands.overlay_on + "\n\t- This command shows a simple floating layout with greeting text and images.\n\n";
+	public static String o = "5. " + util.commands.rename + "\n\t- This command is to rename a saved file.\n\n";
+	public static String p = "6. " + util.commands.delete + "\n\t- This command is to delete a saved file.\n\n";
+	static String q = "This application is also built with two menus, first menu is in the action bar and the second one is if you hold the field.\n\nAction bar menu\n\n1. Save as File\n\t-  To save the current text in this app\n\n2. Share app\n\t- Just in case you want to share this app online\n\n3. Share text\n\t- Just in case you want to share the text you've created\n\n4. Select Keyboard\n\t- Since Simplicity 0.3, Sulat Baybayin has its own developed keyboard, but in this version, it was still under developing, due to the difficulties.\n\nHolding the field menu\n\n1. Clear the field\n\t- Just to clear the fiels\n\n2. Copy texts\n\t- To copy the entire text\n\n3. Paste texts\n\t- To paste your last copied text\n\n4. Select Keyboard\n\nThis are all developed under AIDE application. It has no virus or any illegal activity added in this application. This app is safe as guarantee of 100%.\n\n\nNote to modders:\nDon't add any kind of illegal platform in this application, all we want is to share our knowledge, specially for those who want, and who need to.\n\nDeveloped under;\n\tMPOP Reverse II (MPOP Modifiers Group)\n\tHangDroid MobileTech inc (HangDroid PH).\nWith the affiliation of;\n\tDroidModificators,\n\tPhilTech Developers\n\tAndroid Modders United.\n\nThis application is free and not for sale, if this app was sold, the report to us.";
+	public static String a_comp = a + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q;
+}

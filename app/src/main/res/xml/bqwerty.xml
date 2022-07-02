@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+	android:keyWidth="20.0%p"
+	android:keyHeight="38dp"
+	android:horizontalGap="1dp"
+	android:verticalGap="1dp">
+	
+	<Row>
+		
+		<Key
+			android:codes="49"
+			android:keyLabel="1"/>
+		<Key
+			android:codes="50"
+			android:keyLabel="2"/>
+		<Key
+			android:codes="51"
+			android:keyLabel="3"/>
+		<Key
+			android:codes="52"
+			android:keyLabel="4"/>
+		<Key
+			android:codes="53"
+			android:keyLabel="5"/>
+		<Key
+			android:codes="54"
+			android:keyLabel="6"/>
+		<Key
+			android:codes="55"
+			android:keyLabel="7"/>
+		<Key
+			android:codes="56"
+			android:keyLabel="8"/>
+		<Key
+			android:codes="57"
+			android:keyLabel="9"/>
+		<Key
+			android:codes="48"
+			android:keyLabel="0"/>
+		
+		
+	</Row>
+	<Row>
+		
+		<Key
+			android:codes="5888"
+			android:keyLabel="ᜀ"/>
+		<Key
+			android:codes="5889"
+			android:keyLabel="ᜁ"/>
+		<Key
+			android:codes="5890"
+			android:keyLabel="ᜂ"/>
+		<Key
+			android:codes="5891"
+			android:keyLabel="ᜃ"/>
+		<Key
+			android:horizontalGap="3dp"
+			android:codes="-1903"
+			android:keyLabel=" X "/>
+		<Key
+			android:codes="5892"
+			android:keyLabel="ᜄ"/>
+		<Key
+			android:codes="5906"
+			android:keyLabel="ᜊᜒ"/>
+		<Key
+			android:codes="5907"
+			android:keyLabel="ᜊᜓ"/>
+		<Key
+			android:codes="5908"
+			android:keyLabel="ᜊ᜔"/>
+		
+	</Row>
+	<Row>
+
+		<Key
+			android:codes="5893"
+			android:keyLabel="ᜅ"/>
+		<Key
+			android:codes="5894"
+			android:keyLabel="ᜆ"/>
+		<Key
+			android:codes="5895"
+			android:keyLabel="ᜇ"/>
+		<Key
+			android:codes="5896"
+			android:keyLabel="ᜈ"/>
+		<Key
+			android:codes="5897"
+			android:keyLabel="ᜉ"/>
+		<Key
+			android:codes="5898"
+			android:keyLabel="ᜊ"/>
+		<Key
+			android:codes="5899"
+			android:keyLabel="ᜋ"/>
+		<Key
+			android:codes="5900"
+			android:keyLabel="ᜌ"/>
+
+	</Row>
+	<Row>
+
+		<Key
+			android:codes="-327"
+			android:keyIcon="@drawable/qwerty"/>
+		<Key
+			android:codes="5901"
+			android:keyLabel="ᜍ"/>
+		<Key
+			android:codes="5902"
+			android:keyLabel="ᜎ"/>
+		<Key
+			android:codes="5903"
+			android:keyLabel="ᜏ"/>
+		<Key
+			android:codes="5904"
+			android:keyLabel="ᜐ"/>
+		<Key
+			android:codes="5905"
+			android:keyLabel="ᜑ"/>
+		<Key
+			android:codes="-5"
+			android:isRepeatable="true"
+			android:keyIcon="@drawable/backspace"/>
+
+	</Row>
+	<Row>
+
+		<Key
+			android:codes="-635542663"
+			android:keyLabel="sb"/>
+		<Key
+			android:codes="5942"
+			android:keyLabel="᜶"/>
+		<Key
+			android:codes="32"
+			android:isRepeatable="true"
+			android:keyLabel="                                                 "/>
+		<Key
+			android:codes="5941"
+			android:keyLabel="᜵"/>
+		<Key
+			android:codes="-4"
+			android:keyIcon="@drawable/newline"/>
+	
+	</Row>
+	
+</Keyboard>

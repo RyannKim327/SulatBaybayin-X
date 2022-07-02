@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:keyWidth="35%p"
+	android:keyHeight="38dp"
+	android:horizontalGap="3dp"
+	android:verticalGap="3dp">
+	
+	<Row>
+		
+		<Key
+			android:codes="49"
+			android:keyLabel="1"/>
+		<Key
+			android:codes="50"
+			android:keyLabel="2"/>
+		<Key
+			android:codes="51"
+			android:keyLabel="3"/>
+		<Key
+			android:codes="52"
+			android:keyLabel="4"/>
+		<Key
+			android:codes="53"
+			android:keyLabel="5"/>
+		<Key
+			android:codes="54"
+			android:keyLabel="6"/>
+		<Key
+			android:codes="55"
+			android:keyLabel="7"/>
+		<Key
+			android:codes="56"
+			android:keyLabel="8"/>
+		<Key
+			android:codes="57"
+			android:keyLabel="9"/>
+		<Key
+			android:codes="48"
+			android:keyLabel="0"/>
+		
+		
+	</Row>
+	
+	<Row>
+		
+		<Key
+			android:codes="5908,5906,5907"
+			android:keyLabel="ᜊ᜔,ᜊᜒ,ᜊᜓ"/>
+		<Key
+			android:codes="5888,5898,5891"
+			android:keyLabel="ᜀ,ᜊ,ᜃ"/>
+		<Key
+			android:codes="5895,5889,5892"
+			android:keyLabel="ᜇ,ᜁ,ᜄ"/>
+			
+	</Row>
+	
+	<Row>
+
+		<Key
+			android:codes="5905,5902,5899"
+			android:keyLabel="ᜑ,ᜎ,ᜋ"/>
+		<Key
+			android:codes="5896,5893,5890"
+			android:keyLabel="ᜈ,ᜅ,ᜂ"/>
+		<Key
+			android:codes="5897,5901,5904"
+			android:keyLabel="ᜉ,ᜍ,ᜐ"/>
+
+	</Row>
+	
+	<Row>
+
+		<Key
+			android:codes="5942,5941"
+			android:keyLabel="᜶,᜵"/>
+		<Key
+			android:codes="5894,5903,5900"
+			android:keyLabel="ᜆ,ᜏ,ᜌ"/>
+		<Key
+			android:codes="-5"
+			android:isRepeatable="true"
+			android:keyIcon="@drawable/backspace"/>
+
+	</Row>
+	
+	<Row>
+		
+		<Key
+			android:codes="-327"
+			android:keyIcon="@drawable/t9"/>
+		<Key
+			android:codes="32"
+			android:keyLabel="                                    "/>
+		<Key
+			android:codes="-4"
+			android:keyIcon="@drawable/newline"/>
+		
+	</Row>
+	
+</Keyboard>
