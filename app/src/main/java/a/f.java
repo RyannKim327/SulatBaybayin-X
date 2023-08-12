@@ -25,7 +25,7 @@ public class f extends KeyboardView{
 		super.onDraw(canvas);
 		final Paint a = new Paint();
 		a.setTypeface(util.assets.font(getContext(),"b"));
-		a.setColor(Color.rgb(33,33,33));
+		a.setColor(Color.rgb(255, 255, 255));
 		a.setShadowLayer(5,0,0,Color.WHITE);
 		a.setTextSize(35);
 		a.setTextAlign(Paint.Align.CENTER);
@@ -33,7 +33,7 @@ public class f extends KeyboardView{
 		for(Key d : c){
 			if(d.label != null){
 				String e = d.label.toString();
-				canvas.drawText(e,d.x + (d.width / 2),d.y + (d.height / 1f),a);
+				canvas.drawText(e, d.x + (d.width / 2), d.y + (d.height / 1.25f), a);
 			}
 		}
 	}

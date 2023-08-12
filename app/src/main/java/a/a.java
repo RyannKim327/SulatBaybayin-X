@@ -72,7 +72,7 @@ public class a extends Activity {
 		TextView baybayintitle = new TextView(this);
 		TextView baybayinsubtitle = new TextView(this);
 
-		background.setBackgroundColor(Color.rgb(33, 33, 33));
+		background.setBackgroundColor(Color.rgb(12, 12, 30));
 		background.setOrientation(LinearLayout.VERTICAL);
 		background.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 
@@ -476,7 +476,7 @@ public class a extends Activity {
 			}
 		}
 	}
-}
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu){
 		menu.add(0,0,0,"Save as file").setIcon(android.R.drawable.ic_menu_save).setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);

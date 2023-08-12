@@ -21,14 +21,14 @@ public class e extends EditText {
 	void textcolor(int a){
 		switch(a){
 			case 0:
-				setShadowLayer(3,0,0,Color.WHITE);
-				setTextColor(Color.BLACK);
-				setHintTextColor(Color.DKGRAY);
-				break;
-			case 1:
-				setShadowLayer(3,0,0,Color.BLACK);
+				setShadowLayer(3,0,0,Color.rgb(12, 12, 30));
 				setTextColor(Color.WHITE);
 				setHintTextColor(Color.LTGRAY);
+				break;
+			case 1:
+				setShadowLayer(3,0,0,Color.rgb(200, 200, 200));
+				setTextColor(Color.BLACK);
+				setHintTextColor(Color.DKGRAY);
 			break;
 		}
 	}
