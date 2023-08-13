@@ -24,6 +24,7 @@ public class b extends InputMethodService implements KeyboardView.OnKeyboardActi
         t9 = new Keyboard(this,R.xml.bt9);
         kbv.setKeyboard(sp.getBoolean("kboard",true) ? qwerty : t9);
         kbv.setOnKeyboardActionListener(this);
+		kbv.setPreviewEnabled(false);
         return kbv;
     }
     @Override
