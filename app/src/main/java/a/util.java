@@ -29,7 +29,7 @@ public class util {
 	public static String act_title = "Sulat Baybayin 🇵🇭";
 	public static String developer = "Ryann Kim Sesgundo";
 	public static String hint = "Enter text or command";
-	public static String dev_baybayin = "ᜍᜌᜈ᜔ ᜃᜒᜋ᜔ ᜋᜎᜊᜈᜈ᜔ ᜐᜒᜐ᜔ᜄᜓᜈ᜔ᜇᜓ";
+	public static String dev_baybayin = "ᜇᜌᜈ᜔ ᜃᜒᜋ᜔ ᜋᜎᜊᜈᜈ᜔ ᜐᜒᜐ᜔ᜄᜓᜈ᜔ᜇᜓ";
 	
 	public static String folder = ".Sulat Baybayin";
 	public static String extension = ".sbx";
@@ -70,7 +70,7 @@ public class util {
 		public final static String[] theme = {
 			"ᜇᜒᜎᜒᜋ᜔",
 			"ᜎᜏᜈᜄ᜔",
-			"ᜄᜊᜒ ᜀᜆ᜔ ᜀᜍᜏ᜔"
+			"ᜄᜊᜒ ᜀᜆ᜔ ᜀᜇᜏ᜔"
 		};
 	}
 	public static class assets{
@@ -109,7 +109,7 @@ public class util {
 		public final static String overlay_off = initial_command + "ᜉᜆᜌ᜔ ᜎᜓᜆᜅ᜔";
 		public final static String copy = initial_command + "ᜋᜆᜒᜃ᜔ ᜎᜒᜆᜏ᜔";
 		public final static String rename = initial_command + "ᜉᜎᜒᜆ᜔ ᜉᜅᜎᜈ᜔ ";
-		public final static String delete = initial_command + "ᜊᜓᜍ ";
+		public final static String delete = initial_command + "ᜊᜓᜇ ";
 		public final static String gmail_feedback = initial_command + "ᜇ᜔ᜌᜒᜋᜒᜌ᜔ᜎ᜔";
 	}
 	public static class extras{
@@ -193,7 +193,7 @@ public class util {
 	}
 	public static class ints{
 		public final static int numberwords(String p1){
-			return p1.split("\\s+").length;
+			return p1.trim().split("\\s+").length;
 		}
 		public final static int number(String a){
 			try{

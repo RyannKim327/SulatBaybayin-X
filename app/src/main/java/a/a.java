@@ -112,7 +112,7 @@ public class a extends Activity {
 		main.setVisibility(View.VISIBLE);
 
 		etxt.setHint(util.hint);
-		etxt.setTextScaleX(1.5f);
+		//etxt.setTextScaleX(1.5f);
 		etxt.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT, 0.8f));
 		etxt.setTextSize(sp.getInt(util.preferences.textsize, 15));
 		if (sp.getBoolean(util.preferences.isCopied, false)) {

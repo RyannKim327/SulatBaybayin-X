@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
 	android:keyWidth="20.0%p"
-	android:keyHeight="38dp"
-	android:horizontalGap="1dp"
-	android:verticalGap="1dp">
+	android:keyHeight="40dp"
+	android:horizontalGap="2dp"
+	android:verticalGap="3dp">
 	
 	<Row
 		android:keyWidth="10.0%p">
@@ -51,7 +51,8 @@
 		
 	</Row>
 	<Row
-		android:keyWidth="13.0%p">
+		android:horizontalGap="2dp"
+		android:keyWidth="11.11%p">
 		
 		<Key
 			android:codes="5888"
@@ -70,7 +71,6 @@
 			android:keyLabel="ᜃ"/>
 		
 		<Key
-			android:horizontalGap="3dp"
 			android:codes="-1903"
 			android:keyLabel=" X "/>
 		
@@ -92,9 +92,10 @@
 		
 	</Row>
 	<Row
-		android:keyWidth="15.0%p">
+		android:keyWidth="13.0%p">
 
 		<Key
+			android:horizontalGap="9.5%p"
 			android:codes="5893"
 			android:keyLabel="ᜅ"/>
 		
@@ -118,17 +119,11 @@
 			android:codes="5898"
 			android:keyLabel="ᜊ"/>
 		
-		<Key
-			android:codes="5899"
-			android:keyLabel="ᜋ"/>
 		
-		<Key
-			android:codes="5900"
-			android:keyLabel="ᜌ"/>
 
 	</Row>
 	<Row
-		android:keyWidth="15.0%p">
+		android:keyWidth="12.5%p">
 
 		<Key
 			android:codes="-327"
@@ -137,6 +132,14 @@
 		<!--Key
 			android:codes="5901"
 			android:keyLabel="ᜍ"/-->
+		
+		<Key
+			android:codes="5899"
+			android:keyLabel="ᜋ"/>
+
+		<Key
+			android:codes="5900"
+			android:keyLabel="ᜌ"/>
 		
 		<Key
 			android:codes="5902"
