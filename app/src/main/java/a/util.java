@@ -20,7 +20,7 @@ import java.io.InputStreamReader;
 import android.net.Uri;
 import android.util.Log;
 public class util {
-    
+	
 	private static String a = "mpop.revii.sulatbaybayin.x.";
 	
 	public static String splash_title = "Sulat Baybayin X";
@@ -120,7 +120,7 @@ public class util {
 		public final static String preference = a + "preferences.ACTIVATION_METHOD";
 		public final static String keyboard = a + "preferences.KEYBOARD_CHANGE";
 		public final static String font = a + "preferences.FONT_CHANGE";
-		public final static String splash = a +  "preferences.SPLASH";
+		public final static String splash = a + "preferences.SPLASH";
 		public final static String savetxt = a + "preferences.SAVED_TEXTS";
 		public final static String isCopied = a + "prefeence.IS_COPIED";
 		public final static String theme = a + "preferences.THEME_CHANGE";

@@ -11,7 +11,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 
 public class e extends EditText {
-    public e(Context a){
+	public e(Context a){
 		super (a);
 		setBackgroundColor(Color.TRANSPARENT);
 		setGravity(Gravity.TOP);

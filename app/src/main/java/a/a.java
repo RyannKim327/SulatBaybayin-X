@@ -45,28 +45,28 @@ import java.util.Random;
 import mpop.revii.sulatbaybayin.x.R;
 
 public class a extends Activity {
-    RelativeLayout base;
+	RelativeLayout base;
 	LinearLayout main,basescroll,background,scrollbase;
 	e etxt;
 	d num;
 	SharedPreferences sp;
 	ValueCallback <Uri> call;
 	ValueCallback<Uri[]> Call;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        base = new RelativeLayout(this);
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		base = new RelativeLayout(this);
 		sp = getSharedPreferences(util.preferences.preference, MODE_PRIVATE);
 		getActionBar().setIcon(R.mipmap.ic_launcher);
 		background();
-        main();
+		main();
 		theme(sp.getInt(util.preferences.theme, 0));
 		getActionBar().setSubtitle("By: " + util.developer);
-        int x = 1 + sp.getInt("Feedback", 0);
-        sp.edit().putInt("Feedback", x).commit();
+		int x = 1 + sp.getInt("Feedback", 0);
+		sp.edit().putInt("Feedback", x).commit();
 
 		setContentView(base);
-    }
+	}
 	void background() {
 		background = new LinearLayout(this);
 		TextView baybayintitle = new TextView(this);
@@ -116,7 +116,7 @@ public class a extends Activity {
 		etxt.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT, 0.8f));
 		etxt.setTextSize(sp.getInt(util.preferences.textsize, 15));
 		if (sp.getBoolean(util.preferences.isCopied, false)) {
-            feedxxx();
+			feedxxx();
 			ClipboardManager cm = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
 			if (cm.hasText()) {
 				etxt.setText(cm.getText().toString());
@@ -136,7 +136,7 @@ public class a extends Activity {
 		num.setGravity(Gravity.CENTER);
 		num.setTextSize(19);
 		filter(etxt.a());
-        commands(etxt.a());
+		commands(etxt.a());
 		num.setGravity(Gravity.CENTER);
 
 		txtchanged();
@@ -165,55 +165,55 @@ public class a extends Activity {
 			case 2:
 				final int cal = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
 				new Handler().postDelayed(new Runnable(){
-						@Override
-						public void run() {
-							if (cal >= 6 && cal <= 18) {
-								a.setTextColor(Color.rgb(0, 0, 0));
-							} else {
-								a.setTextColor(Color.rgb(255, 255, 255));
-							}
+					@Override
+					public void run() {
+						if (cal >= 6 && cal <= 18) {
+							a.setTextColor(Color.rgb(0, 0, 0));
+						} else {
+							a.setTextColor(Color.rgb(255, 255, 255));
 						}
-					}, 500);
-				break;
+					}
+				}, 500);
+			break;
 		}
 		registerReceiver(new BroadcastReceiver(){
-				@Override
-				public void onReceive(Context p1, Intent p2) {
-					switch (p2.getIntExtra(util.extras.theme, 0)) {
-						case 0:
-							a.setTextColor(Color.rgb(255, 255, 255));
-							break;
-						case 1:
-							a.setTextColor(Color.rgb(0, 0, 0));
-							break;
-						case 2:
-							final int cal = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
-							new Handler().postDelayed(new Runnable(){
-									@Override
-									public void run() {
-										if (cal >= 6 && cal <= 18) {
-											a.setTextColor(Color.rgb(0, 0, 0));
-										} else {
-											a.setTextColor(Color.rgb(255, 255, 255));
-										}
-									}
-								}, 500);
-							break;
-					}
+			@Override
+			public void onReceive(Context p1, Intent p2) {
+				switch (p2.getIntExtra(util.extras.theme, 0)) {
+					case 0:
+						a.setTextColor(Color.rgb(255, 255, 255));
+						break;
+					case 1:
+						a.setTextColor(Color.rgb(0, 0, 0));
+						break;
+					case 2:
+						final int cal = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+						new Handler().postDelayed(new Runnable(){
+							@Override
+							public void run() {
+								if (cal >= 6 && cal <= 18) {
+									a.setTextColor(Color.rgb(0, 0, 0));
+								} else {
+									a.setTextColor(Color.rgb(255, 255, 255));
+								}
+							}
+						}, 500);
+					break;
 				}
-			}, new IntentFilter(util.actions.theme));
+			}
+		}, new IntentFilter(util.actions.theme));
 		a.setOnClickListener(p2);
 		a.setOnTouchListener(new OnTouchListener(){
-				@Override
-				public boolean onTouch(View p1, MotionEvent p2) {
-					if (a.isFocused() || a.isHovered() || a.isPressed()) {
-						a.setBackgroundColor(Color.rgb(100, 100, 100));
-					} else {
-						a.setBackgroundColor(Color.TRANSPARENT);
-					}
-					return false;
+			@Override
+			public boolean onTouch(View p1, MotionEvent p2) {
+				if (a.isFocused() || a.isHovered() || a.isPressed()) {
+					a.setBackgroundColor(Color.rgb(100, 100, 100));
+				} else {
+					a.setBackgroundColor(Color.TRANSPARENT);
 				}
-			});
+				return false;
+			}
+		});
 		return a;
 	}
 	void removetxtclick(final LinearLayout p1, String p2) {
@@ -222,11 +222,11 @@ public class a extends Activity {
 			final String b = util.arrays.pre_commands[a];
 			if (b.contains(p2) && b.startsWith(p2)) {
 				p1.addView(add("[ " + b.replace(util.commands.initial_command, "") + " ]", new OnClickListener(){
-								   @Override
-								   public void onClick(View p1) {
-									   etxt.setText(b);
-								   }
-							   }));
+					@Override
+					public void onClick(View p1) {
+						etxt.setText(b);
+					}
+				}));
 			}
 		}
 		if (p2.startsWith(util.commands.theme)) {
@@ -235,23 +235,23 @@ public class a extends Activity {
 			for (int a = 0; a < util.arrays.theme.length; a++) {
 				final String b = util.arrays.theme[a];
 				p1.addView(add("[ " + b + " ]", new OnClickListener(){
-								   @Override
-								   public void onClick(View p1) {
-									   etxt.setText(util.commands.theme + b + util.commands.end_command);
-								   }
-							   }));
-			}
+					@Override
+					public void onClick(View p1) {
+						etxt.setText(util.commands.theme + b + util.commands.end_command);
+					}
+				}));
+		}
 		} else if (p2.startsWith(util.commands.textsize)) {
 			p1.removeAllViews();
 			num.setText("List of sizes: ");
 			for (int a = 12; a <= 50; a++) {
 				final int b = a;
 				p1.addView(add("[ " + a + " ]", new OnClickListener(){
-								   @Override
-								   public void onClick(View p1) {
-									   etxt.setText(util.commands.textsize + b + util.commands.end_command);
-								   }
-							   }));
+					@Override
+					public void onClick(View p1) {
+						etxt.setText(util.commands.textsize + b + util.commands.end_command);
+					}
+				}));
 			}
 		} else if (p2.startsWith(util.commands.read)) {
 			p1.removeAllViews();
@@ -259,12 +259,12 @@ public class a extends Activity {
 			if (util.file.list2(util.folder).length > 0) {
 				for (final String a : util.file.list2(util.folder)) {
 					p1.addView(add("[ " + a.replace(util.extension, "") + " ]", new OnClickListener(){
-									   @Override
-									   public void onClick(View p1) {
-										   etxt.setText(util.encryption.base64tostring(util.file.read(a.this, a), true));
-										   util.toast.GREEN(a.this, a.replace(util.extension, "") + "'s content is now on screen");
-									   }
-								   }));
+						@Override
+						public void onClick(View p1) {
+							etxt.setText(util.encryption.base64tostring(util.file.read(a.this, a), true));
+							util.toast.GREEN(a.this, a.replace(util.extension, "") + "'s content is now on screen");
+						}
+					}));
 				}
 			} else {
 				etxt.setText("");
@@ -272,28 +272,28 @@ public class a extends Activity {
 				filter(etxt.getText().toString());
 			}
 		} else if (p2.startsWith(util.commands.overlay_on)) {
-            p1.removeAllViews();
-            num.setText("Available text size: ");
-            for (int a = 12; a <= 50; a++) {
-                final int b = a;
-                p1.addView(add("[ " + b + " ]", new OnClickListener(){
-								   @Override
-								   public void onClick(View p1) {
-									   etxt.setText(util.commands.overlay_on + b + util.commands.end_command);
-								   }
-							   }));
-            }
-        } else if (p2.startsWith(util.commands.rename)) {
+			p1.removeAllViews();
+			num.setText("Available text size: ");
+			for (int a = 12; a <= 50; a++) {
+				final int b = a;
+				p1.addView(add("[ " + b + " ]", new OnClickListener(){
+					@Override
+					public void onClick(View p1) {
+						etxt.setText(util.commands.overlay_on + b + util.commands.end_command);
+					}
+				}));
+			}
+		} else if (p2.startsWith(util.commands.rename)) {
 			p1.removeAllViews();
 			num.setText("List of files: ");
 			if (util.file.list2(util.folder).length > 0) {
 				for (final String a : util.file.list2(util.folder)) {
 					p1.addView(add("[ " + a.replace(util.extension, "") + " ]", new OnClickListener(){
-									   @Override
-									   public void onClick(View p1) {
-										   etxt.setText(util.commands.rename + a.replace(util.extension, "") + " : ");
-									   }
-								   }));
+						@Override
+						public void onClick(View p1) {
+							etxt.setText(util.commands.rename + a.replace(util.extension, "") + " : ");
+						}
+					}));
 				}
 			} else {
 				etxt.setText("");
@@ -306,11 +306,11 @@ public class a extends Activity {
 			if (util.file.list2(util.folder).length > 0) {
 				for (final String a : util.file.list2(util.folder)) {
 					p1.addView(add("[ " + a.replace(util.extension, "") + " ]", new OnClickListener(){
-									   @Override
-									   public void onClick(View p1) {
-										   delete(a.replace(util.extension, ""));
-									   }
-								   }));
+						@Override
+						public void onClick(View p1) {
+							delete(a.replace(util.extension, ""));
+						}
+					}));
 				}
 			} else {
 				etxt.setText("");
@@ -322,32 +322,32 @@ public class a extends Activity {
 			final String b = util.arrays.space_commands[a];
 			if (p2.startsWith(b)) {
 				p1.addView(add("[ Please Command ]", new OnClickListener(){
-								   @Override
-								   public void onClick(View px) {
-									   String c = etxt.getText().toString();
-									   if (c.endsWith(" ")) {
-										   etxt.setText(c + util.commands.end_command.replace(" ", ""));
-									   } else {
-										   etxt.setText(c + util.commands.end_command);
-									   }
-								   }
-							   }));
+					@Override
+					public void onClick(View px) {
+						String c = etxt.getText().toString();
+						if (c.endsWith(" ")) {
+							etxt.setText(c + util.commands.end_command.replace(" ", ""));
+						} else {
+							etxt.setText(c + util.commands.end_command);
+						}
+					}
+				}));
 			}
 		}
 	}
 	void txtchanged() {
 		etxt.addTextChangedListener(new TextWatcher(){
-				@Override
-				public void beforeTextChanged(CharSequence p1, int p2, int p3, int p4) {}
-				@Override
-				public void onTextChanged(CharSequence p1, int p2, int p3, int p4) {
-					filter(etxt.a());
-					commands(etxt.a());
-					sp.edit().putString(util.preferences.savetxt, etxt.getText().toString()).commit();
-				}
-				@Override
-				public void afterTextChanged(Editable p1) {}
-			});
+			@Override
+			public void beforeTextChanged(CharSequence p1, int p2, int p3, int p4) {}
+			@Override
+			public void onTextChanged(CharSequence p1, int p2, int p3, int p4) {
+				filter(etxt.a());
+				commands(etxt.a());
+				sp.edit().putString(util.preferences.savetxt, etxt.getText().toString()).commit();
+			}
+			@Override
+			public void afterTextChanged(Editable p1) {}
+		});
 	}
 	void filter(String p1) {
 		if (p1.startsWith(util.commands.initial_command) && !p1.endsWith(util.commands.end_command)) {
@@ -384,27 +384,27 @@ public class a extends Activity {
 				num.setTextColor(Color.rgb(0, 0, 0));
 				getActionBar().setBackgroundDrawable(new ColorDrawable(Color.rgb(175, 175, 175)));
 				break;
-            case 2:
+			case 2:
 				final int cal = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
 				new Handler().postDelayed(new Runnable(){
-						@Override
-						public void run() {
-							if (cal >= 6 && cal <= 18) {
-								setTheme(android.R.style.Theme_DeviceDefault_Light);
-								etxt.textcolor(1);
-								background.setBackgroundColor(Color.rgb(200, 200, 200));
-								num.setTextColor(Color.rgb(0, 0, 0));
-								getActionBar().setBackgroundDrawable(new ColorDrawable(Color.rgb(175, 175, 175)));
-							} else {
-								setTheme(android.R.style.Theme_DeviceDefault);
-								etxt.textcolor(0);
-								background.setBackgroundColor(Color.rgb(20, 20, 20));
-								num.setTextColor(Color.rgb(255, 255, 255));
-								getActionBar().setBackgroundDrawable(new ColorDrawable(Color.rgb(33, 33, 33)));
-							}
+					@Override
+					public void run() {
+						if (cal >= 6 && cal <= 18) {
+							setTheme(android.R.style.Theme_DeviceDefault_Light);
+							etxt.textcolor(1);
+							background.setBackgroundColor(Color.rgb(200, 200, 200));
+							num.setTextColor(Color.rgb(0, 0, 0));
+							getActionBar().setBackgroundDrawable(new ColorDrawable(Color.rgb(175, 175, 175)));
+						} else {
+							setTheme(android.R.style.Theme_DeviceDefault);
+							etxt.textcolor(0);
+							background.setBackgroundColor(Color.rgb(20, 20, 20));
+							num.setTextColor(Color.rgb(255, 255, 255));
+							getActionBar().setBackgroundDrawable(new ColorDrawable(Color.rgb(33, 33, 33)));
 						}
-					}, 500);
-				break;
+					}
+				}, 500);
+			break;
 		}
 		sp.edit().putInt(util.preferences.theme, p1).commit();
 		Intent intent = new Intent(util.actions.theme);
@@ -428,10 +428,10 @@ public class a extends Activity {
 			} else if (p1.equals(util.commands.copy)) {
 				sp.edit().putBoolean(util.preferences.isCopied, !sp.getBoolean(util.preferences.isCopied, false)).commit();
 				etxt.setText("");
-                util.toast.GREEN(this, "Auto copy: " + sp.getBoolean(util.preferences.isCopied, false));
+				util.toast.GREEN(this, "Auto copy: " + sp.getBoolean(util.preferences.isCopied, false));
 			} else if (p1.startsWith(util.commands.theme) && p1.endsWith(util.commands.end_command)) {
 				theme(p1.replace(util.commands.theme, "").replace(util.commands.end_command, ""));
-                recreate();
+				recreate();
 			} else if (p1.startsWith(util.commands.textsize) && p1.endsWith(util.commands.end_command)) {
 				int a = util.ints.number(etxt.getText().toString().replace(util.commands.textsize, "").replace(util.commands.end_command, ""));
 				if (a >= 12 && a <= 50 && a != 0) {
@@ -445,15 +445,15 @@ public class a extends Activity {
 			} else if (p1.startsWith(util.commands.delete) && p1.endsWith(util.commands.end_command)) {
 				delete(p1.replace(util.extension, "").replace(util.commands.delete, "").replace(util.commands.end_command, ""));
 			} else if (p1.equals(util.commands.gmail_feedback)) {
-                gmail();
-                etxt.setText("");
-            } else if (p1.equals(util.commands.dev)) {
-                etxt.setText(util.assets.read(this, "m"));
-            } else if (p1.equals(util.commands.fb_feedback)) {
-                fb();
-                etxt.setText("");
-            } else if (p1.startsWith(util.commands.overlay_on) && p1.endsWith(util.commands.end_command)) {
-                if (!isActive(c.class)) {
+				gmail();
+				etxt.setText("");
+			} else if (p1.equals(util.commands.dev)) {
+				etxt.setText(util.assets.read(this, "m"));
+			} else if (p1.equals(util.commands.fb_feedback)) {
+				fb();
+				etxt.setText("");
+			} else if (p1.startsWith(util.commands.overlay_on) && p1.endsWith(util.commands.end_command)) {
+				if (!isActive(c.class)) {
 					int a = util.ints.number(etxt.getText().toString().replace(util.commands.overlay_on, "").replace(util.commands.end_command, ""));
 					if (a  >= 12 && a <= 50 && a != 0) {
 						sp.edit().putInt("overlaytxt", a).commit();
@@ -469,7 +469,7 @@ public class a extends Activity {
 					}
 					etxt.setText("");
 				}
-            } else if (p1.equals(util.commands.overlay_off)) {
+			} else if (p1.equals(util.commands.overlay_off)) {
 				if (isActive(c.class)) {}
 				stopService(new Intent(this, c.class));
 				etxt.setText("");
@@ -491,27 +491,27 @@ public class a extends Activity {
 			case 0:
 				savefile();
 			break;
-            case 1:
-                Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.putExtra(Intent.EXTRA_TEXT,"Download Sulat Baybayin X at " + util.website);
-                intent.putExtra(Intent.EXTRA_SUBJECT, "Download Sulat BaybayinX at " + util.website);
-                intent.setType("text/plain");
-                startActivity(intent);
-            break;
-            case 2:
-                Intent intent1 = new Intent(Intent.ACTION_SEND);
-                intent1.putExtra(Intent.EXTRA_TEXT, etxt.getText().toString());
-                intent1.putExtra(Intent.EXTRA_SUBJECT,etxt.getText().toString());
-                intent1.setType("text/plain");
+			case 1:
+				Intent intent = new Intent(Intent.ACTION_SEND);
+				intent.putExtra(Intent.EXTRA_TEXT, "Download Sulat Baybayin X at " + util.website);
+				intent.putExtra(Intent.EXTRA_SUBJECT, "Download Sulat BaybayinX at " + util.website);
+				intent.setType("text/plain");
+				startActivity(intent);
+			break;
+			case 2:
+				Intent intent1 = new Intent(Intent.ACTION_SEND);
+				intent1.putExtra(Intent.EXTRA_TEXT, etxt.getText().toString());
+				intent1.putExtra(Intent.EXTRA_SUBJECT,etxt.getText().toString());
+				intent1.setType("text/plain");
 				if(etxt.getText().toString().isEmpty()){
-					util.toast.RED(this,"Text must not be empty");
+					util.toast.RED(this, "Text must not be empty");
 				}else{
 					startActivity(intent1);
 				}
-            break;
-            case 3:
+			break;
+			case 3:
 				((InputMethodManager)getSystemService(INPUT_METHOD_SERVICE)).showInputMethodPicker();
-            break;
+			break;
 		}
 		return super.onOptionsItemSelected(item);
 	}
@@ -544,9 +544,9 @@ public class a extends Activity {
 					util.toast.RED(a.this,"There\'s no copied texts yet");
 				}
 			break;
-            case 3:
-                ((InputMethodManager)getSystemService(INPUT_METHOD_SERVICE)).showInputMethodPicker();
-            break;
+			case 3:
+				((InputMethodManager)getSystemService(INPUT_METHOD_SERVICE)).showInputMethodPicker();
+			break;
 		}
 		return super.onContextItemSelected(item);
 	}
@@ -559,18 +559,18 @@ public class a extends Activity {
 		b.setHint("File name");
 		a.setView(b);
 		a.setPositiveButton("Save", new DialogInterface.OnClickListener(){
-				@Override
-				public void onClick(DialogInterface p1, int p2) {
-					if(util.file.isHere(util.folder + "/" + b.getText().toString() + util.extension)){
-						overwrite(b.getText().toString());
-					}else if(b.getText().toString().isEmpty() || b.getText().toString().equalsIgnoreCase("")){
-						util.toast.RED(a.this,"File name must not be empty");
-					}else{
-						util.file.save(b.getText().toString() + util.extension,util.encryption.base64tostring(etxt.getText().toString(),false));
-						util.toast.GREEN(a.this,"File saved");
-					}
+			@Override
+			public void onClick(DialogInterface p1, int p2) {
+				if(util.file.isHere(util.folder + "/" + b.getText().toString() + util.extension)){
+					overwrite(b.getText().toString());
+				}else if(b.getText().toString().isEmpty() || b.getText().toString().equalsIgnoreCase("")){
+					util.toast.RED(a.this,"File name must not be empty");
+				}else{
+					util.file.save(b.getText().toString() + util.extension,util.encryption.base64tostring(etxt.getText().toString(),false));
+					util.toast.GREEN(a.this,"File saved");
 				}
-			});
+			}
+		});
 		a.setNegativeButton("Cancel",null);
 		a.setCancelable(false);
 		if(etxt.getText().toString().isEmpty() || etxt.getText().toString().equalsIgnoreCase("")){
@@ -590,13 +590,13 @@ public class a extends Activity {
 		b.setTextSize(19);
 		a.setView(b);
 		a.setPositiveButton("Yes", new DialogInterface.OnClickListener(){
-				@Override
-				public void onClick(DialogInterface px, int p2) {
-					util.file.delete(p1 + util.extension);
-					util.file.save(p1 + util.extension,util.encryption.base64tostring(etxt.getText().toString(),false));
-					util.toast.GREEN(a.this,"File content replaced successfully");
-				}
-			});
+			@Override
+			public void onClick(DialogInterface px, int p2) {
+				util.file.delete(p1 + util.extension);
+				util.file.save(p1 + util.extension,util.encryption.base64tostring(etxt.getText().toString(),false));
+				util.toast.GREEN(a.this,"File content replaced successfully");
+			}
+		});
 		a.setNegativeButton("No",null);
 		a.setCancelable(false);
 		a.show();
@@ -609,9 +609,9 @@ public class a extends Activity {
 			case "ᜎᜏᜈᜄ᜔":
 				theme(1);
 			break;
-            case "ᜄᜊᜒ ᜀᜆ᜔ ᜀᜍᜏ᜔":
-                theme(2);
-            break;
+			case "ᜄᜊᜒ ᜀᜆ᜔ ᜀᜍᜏ᜔":
+				theme(2);
+			break;
 		}
 		etxt.setText("");
 	}
@@ -670,19 +670,19 @@ public class a extends Activity {
 		b.setPadding(5,5,5,5);
 		a.setView(b);
 		a.setPositiveButton("Yes", new DialogInterface.OnClickListener(){
-				@Override
-				public void onClick(DialogInterface p1, int p2) {
-					util.file.delete(g1 + util.extension);
-					util.toast.GREEN(a.this,"File deleted successfully");
-					etxt.setText("");
-				}
-			});
+			@Override
+			public void onClick(DialogInterface p1, int p2) {
+				util.file.delete(g1 + util.extension);
+				util.toast.GREEN(a.this,"File deleted successfully");
+				etxt.setText("");
+			}
+		});
 		a.setNegativeButton("No", new DialogInterface.OnClickListener(){
-				@Override
-				public void onClick(DialogInterface p1, int p2) {
-					etxt.setText("");
-				}
-			});
+			@Override
+			public void onClick(DialogInterface p1, int p2) {
+				etxt.setText("");
+			}
+		});
 		a.setCancelable(false);
 		if(util.file.isHere(util.folder + "/" + g1 + util.extension)){
 			a.show();
@@ -690,60 +690,60 @@ public class a extends Activity {
 			util.toast.RED(a.this,"File not found");
 		}
 	}
-    void deleteAll(final String g1){
-        AlertDialog.Builder a = new AlertDialog.Builder(this);
-        a.setTitle("Confirmation");
-        a.setIcon(android.R.drawable.ic_menu_info_details);
-        a.setMessage("Are you sure you want to delete all files?");
-        a.setPositiveButton("Yes", new DialogInterface.OnClickListener(){
-                @Override
-                public void onClick(DialogInterface p1, int p2) {
-                    util.file.delete(g1 + util.extension);
-                    etxt.setText("");
-                }
-            });
-        a.setNegativeButton("No", new DialogInterface.OnClickListener(){
-                @Override
-                public void onClick(DialogInterface p1, int p2) {
-                    etxt.setText("");
-                }
-            });
-        a.setCancelable(false);
-        if(util.file.isHere(util.folder + "/" + g1 + util.extension)){
-            a.show();
-        }else{
-            util.toast.RED(a.this,"File not found");
+	void deleteAll(final String g1){
+		AlertDialog.Builder a = new AlertDialog.Builder(this);
+		a.setTitle("Confirmation");
+		a.setIcon(android.R.drawable.ic_menu_info_details);
+		a.setMessage("Are you sure you want to delete all files?");
+		a.setPositiveButton("Yes", new DialogInterface.OnClickListener(){
+			@Override
+			public void onClick(DialogInterface p1, int p2) {
+				util.file.delete(g1 + util.extension);
+				etxt.setText("");
+			}
+		});
+		a.setNegativeButton("No", new DialogInterface.OnClickListener(){
+			@Override
+			public void onClick(DialogInterface p1, int p2) {
+				etxt.setText("");
+			}
+		});
+		a.setCancelable(false);
+		if(util.file.isHere(util.folder + "/" + g1 + util.extension)){
+			a.show();
+		}else{
+			util.toast.RED(a.this,"File not found");
 		}
-    }
-    void gmail(){
-        Intent a = new Intent(Intent.ACTION_SEND);
-        a.setAction(Intent.ACTION_SEND);
-        a.putExtra(Intent.EXTRA_SUBJECT,getTitle() + " " + getPackageName());
-        a.setType("text/html");
-        a.putExtra(Intent.EXTRA_EMAIL, new String[]{"weryses19@gmail.com"});
-        a.setPackage("com.google.android.gm");
-        startActivity(a);
-    }
-    void fb(){
-        AlertDialog.Builder a = new AlertDialog.Builder(a.this);
-        WebView b = new WebView(this){
-            @Override
-            public boolean onCheckIsTextEditor(){
-                return true;
-            }
-        };
-        b.getSettings().setJavaScriptEnabled(true);
-        b.getSettings().setAppCacheEnabled(true);
-        b.setFocusable(true);
-        b.setFocusableInTouchMode(true);
-        b.requestFocus();
-        b.setWebViewClient(new WebViewClient(){
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView wv,String url){
-                wv.loadUrl(url);
-                return true;
-            }
-        });
+	}
+	void gmail(){
+		Intent a = new Intent(Intent.ACTION_SEND);
+		a.setAction(Intent.ACTION_SEND);
+		a.putExtra(Intent.EXTRA_SUBJECT,getTitle() + " " + getPackageName());
+		a.setType("text/html");
+		a.putExtra(Intent.EXTRA_EMAIL, new String[]{"weryses19@gmail.com"});
+		a.setPackage("com.google.android.gm");
+		startActivity(a);
+	}
+	void fb(){
+		AlertDialog.Builder a = new AlertDialog.Builder(a.this);
+		WebView b = new WebView(this){
+			@Override
+			public boolean onCheckIsTextEditor(){
+				return true;
+			}
+		};
+		b.getSettings().setJavaScriptEnabled(true);
+		b.getSettings().setAppCacheEnabled(true);
+		b.setFocusable(true);
+		b.setFocusableInTouchMode(true);
+		b.requestFocus();
+		b.setWebViewClient(new WebViewClient(){
+			@Override
+			public boolean shouldOverrideUrlLoading(WebView wv,String url){
+				wv.loadUrl(url);
+				return true;
+			}
+		});
 		b.setWebChromeClient(new WebChromeClient(){
 			public void openFileChooser(ValueCallback<Uri> vc){
 				call = vc;
@@ -795,35 +795,35 @@ public class a extends Activity {
 				return super.onJsPrompt(wv, str1, str2, str3, jsr);
 			}
 		});
-        b.loadUrl(util.fb_id);
-        a.setTitle("Facebook Feedback");
-        a.setView(b);
-        a.setPositiveButton("Done",null);
-        a.setCancelable(true);
-        a.show();
-    }
-    void feedxxx(){
-        if(new Random().nextInt(100)%10 == 0){
-            AlertDialog.Builder a = new AlertDialog.Builder(this);
-            a.setTitle("Are you enjoying this app?");
-            a.setMessage("Send us a feedback about your experience in using this app by using the commands or clicking any in the buttons below.");
-            a.setPositiveButton("Facebook", new DialogInterface.OnClickListener(){
-                    @Override
-                    public void onClick(DialogInterface p1, int p2) {
-                        fb();
-                    }
-                });
-            a.setNegativeButton("Gmail", new DialogInterface.OnClickListener(){
-                    @Override
-                    public void onClick(DialogInterface p1, int p2) {
-                        gmail();
-                    }
-                });
-            a.setNeutralButton("Cancel",null);
-            a.setCancelable(false);
-            a.show();
-        }
-    }
+		b.loadUrl(util.fb_id);
+		a.setTitle("Facebook Feedback");
+		a.setView(b);
+		a.setPositiveButton("Done",null);
+		a.setCancelable(true);
+		a.show();
+	}
+	void feedxxx(){
+		if(new Random().nextInt(100)%10 == 0){
+			AlertDialog.Builder a = new AlertDialog.Builder(this);
+			a.setTitle("Are you enjoying this app?");
+			a.setMessage("Send us a feedback about your experience in using this app by using the commands or clicking any in the buttons below.");
+			a.setPositiveButton("Facebook", new DialogInterface.OnClickListener(){
+				@Override
+				public void onClick(DialogInterface p1, int p2) {
+					fb();
+				}
+			});
+			a.setNegativeButton("Gmail", new DialogInterface.OnClickListener(){
+				@Override
+				public void onClick(DialogInterface p1, int p2) {
+					gmail();
+				}
+			});
+			a.setNeutralButton("Cancel",null);
+			a.setCancelable(false);
+			a.show();
+		}
+	}
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		switch(requestCode){
@@ -837,8 +837,8 @@ public class a extends Activity {
 			break;
 			case 1:
 				if(Call == null){
-                    return;
-                }
+					return;
+				}
 				Call.onReceiveValue(WebChromeClient.FileChooserParams.parseResult(resultCode,data));
 				Call = null;
 			break;

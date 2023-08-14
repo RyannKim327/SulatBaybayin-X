@@ -7,4 +7,3 @@
 	android:textSize="25sp"
 	android:gravity="center"
 	android:background="@drawable/popbg"/>
-

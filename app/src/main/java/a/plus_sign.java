@@ -1,7 +1,7 @@
 package a;
 
 public class plus_sign {
-    public static String a = "\tGreetings!!!\n\n\tThis is the Sulat Baybayin X, under the X-Series of MPOP Reverse II. This is the Help Desk Section where it may guide you how to use the entire application.\n\n";
+	public static String a = "\tGreetings!!!\n\n\tThis is the Sulat Baybayin X, under the X-Series of MPOP Reverse II. This is the Help Desk Section where it may guide you how to use the entire application.\n\n";
 	public static String b = "This app is now powered by the Sulat Baybayin commands that starts with Philippine Double Punctuation \"" + util.commands.initial_command +" \". The commands are all changed and remake as baybayin for easier learning the script.\n\nThis are the following commands that you may use:\n";
 	public static String c = "1. " + util.commands.helpdesk + "\n\t- This command is literally show this texts again.\n\n";
 	public static String d = "2. " + util.commands.script + "\n\t- This command is what I called, Baybay Silay, a command where you may see the baybayin scripts with the corresponding characters. It also added with the baybayin rule (English and Tagalog). It also added, what are the invalid character in unicode names and also the version of baybayin used.\n\n";

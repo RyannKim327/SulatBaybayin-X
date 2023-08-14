@@ -5,6 +5,6 @@
 		android:icon="@mipmap/ic_launcher"
 		android:imeSubtypeMode="keyboard"
 		android:imeSubtypeLocale="tl-baybayin"
-        android:label="Baybayin"/>
+		android:label="Baybayin"/>
 	
 </input-method>

@@ -12,7 +12,7 @@ import java.util.List;
 import android.graphics.drawable.ColorDrawable;
 
 public class f extends KeyboardView{
-    public f(Context a,AttributeSet b){
+	public f(Context a,AttributeSet b){
 		super(a,b);
 		try {
 			setBackgroundDrawable(Drawable.createFromStream(getContext().getAssets().open("i"), null));
