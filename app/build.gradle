@@ -6,7 +6,7 @@ android {
 		minSdkVersion 14
 		targetSdkVersion 21
 		versionCode 19
-		versionName "AlphaLite 0.8"
+		versionName "AlphaLite 0.9"
 	}
 	buildTypes {
 		release {
