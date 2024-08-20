@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_alignParentBottom="true"
+	android:layout_gravity="bottom">
+
+	<TextView
+    android:background="@color/white"
+    android:id="@+id/words"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:gravity="center"/>
+
+	<a.c
+		android:id="@+id/keyboard"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:keyTextSize="0sp"
+		android:padding="1dp"
+		android:keyBackground="@drawable/key_background"
+		android:keyTextColor="@android:color/transparent"/>
+
+</LinearLayout>
+

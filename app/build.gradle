@@ -1,21 +1,24 @@
 apply plugin: 'com.android.application'
 
 android {
-	defaultConfig {
-		applicationId "mpop.revii.sulatbaybayin.x"
-		minSdkVersion 14
-		targetSdkVersion 21
-		versionCode 19
-		versionName "AlphaLite 0.9"
-	}
-	buildTypes {
-		release {
-			minifyEnabled false
-			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-		}
-	}
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "mpop.revii.sbx"
+        minSdkVersion 14
+        targetSdkVersion 29
+        versionCode 1
+        versionName "AlphaLite 0.8"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
 }
 
 dependencies {
-	implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }

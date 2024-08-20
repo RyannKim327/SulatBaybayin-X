@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	
-	<string name="app_name_actionbar">Sulat Baybayin  🇵🇭</string>
-	<string name="app_name">Sulat Baybayin X</string>
-	<string name="dev">Ryann Kim Sesgundo</string>
-	<string name="dummy">Mikaella Aloa</string>
-	<string name="group">MPOP Reverse II</string>
-	<string name="dev_note">by: %d</string>
-	<string name="hint">Enter text or command</string>
-	<string name="note">To those modders:
-		\n\tI would like to inform you to avoid this app to use as illegal equipment for phishing or hacking purposes. Just make an assurance to change all of this into more usefull and avoid pornograhpic contents such as falling napkins and briefs as respect to those Sulat Baybayin users. I don\'t allow modder to ask permission to them to remodify this app, you don\'t ask any permission because I already granted it.
-		\n\tAs additional, "NEVER" add neither my name nor my mini organization in the credits list. I never allow every modder to add my name just to make me or you, popular to people. Just change my name if possible.
-		\n
-		\n\tTruly yours:
-		\n\t-RySes
-		\n\t-MikayzKie
-		\n\t-Krysanne Guinmods</string>
-	
+  <string name="app_name">Sulat Baybayin</string>
+  <string name="dev">MPOP Reverse II</string>
 </resources>
